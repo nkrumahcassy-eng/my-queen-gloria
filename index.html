@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17070b">
+<title>My Queen Gloria ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #100609;
+  --wine: #380b18;
+  --red: #a51d35;
+  --gold: #d7b46a;
+  --cream: #f9ead9;
+  --muted: #cbb8b4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+  /* Cinematic scene transitions */
+body > section:not(.hidden) {
+  animation: cinematicEnter 1s ease both;
+}
+
+@keyframes cinematicEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    filter: brightness(0.65);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: brightness(1);
+  }
+}
+
+/* Elegant glowing gold headings */
+.script {
+  text-shadow:
+    0 0 8px rgba(215, 180, 106, 0.15),
+    0 0 24px rgba(215, 180, 106, 0.12);
+}
+
+/* Soft glow around gold buttons */
+.btn {
+  box-shadow: 0 5px 25px rgba(165, 29, 53, 0.12);
+}
+
+.btn:hover {
+  box-shadow: 0 0 25px rgba(215, 180, 106, 0.25);
+}
+
+/* Smooth reveal for the love letter */
+.letter {
+  animation: letterReveal 1.2s ease both;
+}
+
+@keyframes letterReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Highlight the active reason card */
+.reason-card {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215, 180, 106, 0.7);
+  box-shadow: 0 20px 70px rgba(165, 29, 53, 0.15);
+}
+
+#petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  color: #b72a43;
+  text-shadow: 0 0 12px #8d142d;
+  animation: fall linear forwards;
+  opacity: .75;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(80px, 110vh, 0) rotate(700deg);
+    opacity: 0;
+  }
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rose-bg {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 3, 7, 0.55) 0%,
+      rgba(35, 5, 14, 0.45) 45%,
+      rgba(8, 2, 5, 0.88) 100%
+    ),
+    url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1800&q=90')
+    center / cover no-repeat;
+
+  opacity: 1;
+  z-index: -1;
+
+  animation: roseReveal 2s ease-out both;
+}
+
+@keyframes roseReveal {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.content {
+  width: min(100%, 760px);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 22px;
+}
+
+.script {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+h1 {
+  font-size: clamp(48px, 12vw, 92px);
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: clamp(32px, 8vw, 54px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+h3 {
+  font-size: 27px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.btn {
+  border: 1px solid var(--gold);
+  background: linear-gradient(135deg, #6c1429, #300a17);
+  color: var(--cream);
+  padding: 15px 28px;
+  margin: 12px 5px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-3px);
+}
+
+.outline {
+  background: transparent;
+}
+
+.rose-image {
+  width: min(240px, 65vw);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 50px #8e193544;
+  margin: 0 auto 30px;
+}
+
+#countdown {
+  font-size: 90px;
+  color: var(--gold);
+  margin: 30px 0;
+}
+
+.envelope {
+  width: min(340px, 85vw);
+  height: 220px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #7a1b30, #3a0b19);
+  border: 1px solid var(--gold);
+  position: relative;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 20px 60px #0008;
+  transition: transform .4s;
+}
+
+.envelope:hover {
+  transform: translateY(-5px);
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, transparent 49%, #260712 50%);
+  clip-path: polygon(0 0, 100% 0, 50% 63%);
+}
+
+.seal {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #400b19;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  position: relative;
+  z-index: 1;
+}
+
+.letter {
+  background: #f5e8d4;
+  color: #3b2020;
+  padding: clamp(25px, 6vw, 50px);
+  text-align: left;
+  border: 1px solid var(--gold);
+  box-shadow: 0 20px 70px #0008;
+  margin-top: 25px;
+}
+
+.letter h2 {
+  color: #72152a;
+  text-align: center;
+}
+
+.letter p {
+  color: #513b35;
+  font-size: 19px;
+  margin: 17px 0;
+}
+
+.signature {
+  text-align: right;
+  font-size: 32px;
+  color: #84152d;
+  font-family: 'Great Vibes', cursive;
+  margin-top: 25px;
+}
+
+.section-intro {
+  margin-bottom: 40px;
+}
+
+.progress {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.reason-card {
+  width: min(100%, 430px);
+  min-height: 340px;
+  margin: 0 auto 25px;
+  padding: 32px 25px;
+  background: linear-gradient(145deg, #38101d, #16070d);
+  border: 1px solid #b48a5055;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 70px #0005;
+  transition: .3s;
+}
+
+.reason-card .number {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.reason-card .icon {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.reason-card h3 {
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.reason-card p {
+  font-size: 21px;
+}
+
+.reason-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.music-box {
+  border: 1px solid #b48a5066;
+  padding: 30px 20px;
+  margin: 35px auto;
+  max-width: 430px;
+  background: #1c0a10cc;
+}
+
+.vinyl {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, #211d20 0 5px, #0b090a 6px 10px);
+  border: 5px solid #2d2426;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 25px;
+  animation: spin 5s linear infinite;
+  animation-play-state: paused;
+}
+
+.vinyl.playing {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.vinyl-center {
+  width: 48px;
+  height: 48px;
+  background: var(--red);
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.final-rose {
+  width: min(270px, 70vw);
+  height: 280px;
+  object-fit: cover;
+  border-radius: 140px 140px 8px 8px;
+  margin: 0 auto 30px;
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 60px #a51d3533;
+}
+
+.divider {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 30px auto;
+}
+
+.small {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+  /* 💍 My Queen's final proposal surprise */
+
+.ring-box {
+  font-size: 100px;
+  margin: 30px auto;
+  animation: ringFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(215, 180, 106, 0.45));
+}
+
+@keyframes ringFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.06);
+  }
+}
+
+#ringScene .content {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+#ringScene p {
+  line-height: 1.9;
+}
+
+#ringReveal {
+  margin-top: 30px;
+  animation: proposalReveal 1.2s ease both;
+}
+
+@keyframes proposalReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#ringScene .btn {
+  margin: 10px 5px;
+}
+
+#proposalAccepted {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid rgba(215, 180, 106, 0.45);
+  border-radius: 18px;
+  background: rgba(40, 10, 20, 0.65);
+}
+</style>
+</head>
+
+<body>
+<div id="petals"></div>
+
+<!-- OPENING -->
+<section id="opening">
+  <div class="rose-bg"></div>
+  <div class="content fade-in">
+    <div class="eyebrow">A little world made just for you</div>
+    <img class="rose-image"
+      src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=700&q=85"
+      alt="Beautiful red roses">
+    <p>For the girl who makes my heart smile</p>
+    <h1 class="script">My Queen Gloria</h1>
+    <div class="divider"></div>
+    <p>Every rose, every word, every little detail...</p>
+    <p class="gold">This is for you, my love. ❤️</p>
+    <button class="btn" onclick="startCountdown()">ENTER MY HEART ♥</button>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countScene" class="hidden">
+  <div class="rose-bg"></div>
+  <div class="content">
+    <div class="eyebrow">Something from my heart to yours</div>
+    <h2 class="script">Just for you, Gloria</h2>
+    <p>Take a little breath, my love.</p>
+    <div id="countdown">10</div>
+    <p class="gold">A little surprise is waiting for you...</p>
+  </div>
+</section>
+
+<!-- ENVELOPE -->
+<section id="envelopeScene" class="hidden">
+  <div class="rose-bg"></div>
+  <div class="content">
+    <div class="eyebrow">A letter written with love</div>
+    <h2 class="script">To My Queen</h2>
+    <p>There's something I want you to know.</p>
+    <div class="envelope" onclick="openLetter()">
+      <div class="seal">♥</div>
+    </div>
+    <p class="gold">Tap the envelope to open your letter</p>
+    <div id="letter" class="letter hidden">
+      <h2 class="script">My Dearest Gloria</h2>
+
+      <p>Hey, my love. ❤️</p>
+
+      <p>If you're reading this right now, I hope you're smiling. And if you're not, I hope these little words can give you a reason to.</p>
+
+      <p>First of all, I want you to know something: I'm genuinely happy that I met you. Out of all the people in this world, somehow our paths crossed, and I'm grateful for that.</p>
+
+      <p>You have this beautiful smile that I wish I could keep seeing over and over again. There's something about it that makes me happy, and sometimes I don't even know how to explain it. I just know that it means something to me.</p>
+
+      <p>And it's not only your smile, baby. It's the way you make me feel. The happiness you bring into my life, the little moments we share, and the way you have become someone so special to me.</p>
+
+      <p><strong>You make me feel things that I sometimes struggle to put into words.</strong></p>
+
+      <p>I want you to feel loved, appreciated, respected, and understood. You don't have to be perfect, and you don't have to pretend to be strong every single day.</p>
+
+      <p>You're allowed to have bad days. You're allowed to feel tired, to have worries, and to need someone to listen. I hope we can keep learning how to understand each other, even when things aren't perfect.</p>
+
+      <p>My love, I can't promise that every day will be perfect. I can't predict everything the future has waiting for us. But I can tell you that what I feel for you is something I want to treat with care.</p>
+
+      <p>I want us to laugh together, make beautiful memories, learn from our mistakes, and keep discovering new things about each other.</p>
+
+      <p>I want to celebrate your happiness and encourage you when you're working towards your dreams. I want you to know that your feelings matter and that your voice deserves to be heard.</p>
+
+      <p>And whenever you look at yourself and forget just how special you are, I hope you remember that somewhere, there's someone who loves seeing you smile and feels lucky to know you.</p>
+
+      <p><strong>That someone is me, Gloria. ❤️</strong></p>
+
+      <p>You are my Queen, my Love, and the girl whose smile has found a special place in my heart.</p>
+
+      <p>If I could give you one thing, it would be the ability to see yourself through my eyes, even for just a moment. Maybe then you'd understand why your smile means so much to me and why meeting you is something I'm grateful for.</p>
+
+      <p><strong>You don't have to do anything extraordinary to be special to me. You being you is already something beautiful.</strong></p>
+
+      <p>So keep smiling, my love. Keep being yourself. Keep dreaming, growing, and becoming the person you want to be.</p>
+
+      <p>And let this little website remind you of something whenever you visit it: you are appreciated, you are cherished, and you will always have a special place in the story I'm writing.</p>
+
+      <div class="signature">I love you, My Queen ❤️</div>
+    </div>
+    <button id="letterNext" class="btn hidden" onclick="showReasons()">DISCOVER MY 20 REASONS ♥</button>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasonsScene" class="hidden">
+  <div class="rose-bg"></div>
+  <div class="content">
+    <div class="eyebrow">Twenty little pieces of my heart</div>
+    <h2 class="script">Why You're My Queen</h2>
+    <p class="section-intro">Each card holds a little reason, Gloria. ❤️</p>
+
+    <div class="reason-card fade-in">
+      <div class="number" id="reasonNumber">REASON 01 OF 20</div>
+      <div class="icon" id="reasonIcon">🌹</div>
+      <h3 id="reasonTitle">Your Beautiful Smile</h3>
+      <p id="reasonText"></p>
+    </div>
+
+    <div class="reason-controls">
+      <button class="btn outline" id="prevReason" onclick="changeReason(-1)">← Previous</button>
+      <button class="btn" id="nextReason" onclick="changeReason(1)">Next Reason →</button>
+    </div>
+    <p class="small">Take your time, My Love. Every reason is for you.</p>
+    <button id="musicNext" class="btn hidden" onclick="showMusic()">ONE MORE SURPRISE 🎵</button>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="musicScene" class="hidden">
+  <div class="rose-bg"></div>
+  <div class="content">
+    <div class="eyebrow">A song for my Queen</div>
+    <h2 class="script">Just You & Me</h2>
+    <p>Some songs say the things our hearts can't quite explain.</p>
+
+    <div class="music-box">
+      <div class="vinyl" id="vinyl">
+        <div class="vinyl-center">♥</div>
+      </div>
+      <h3>You're Still the One</h3>
+      <p>Shania Twain</p>
+      <audio id="song" preload="metadata" loop>
+        <source src="music/our-song.mp3" type="audio/mpeg">
+      </audio>
+      <button class="btn" id="playButton" onclick="toggleMusic()">▶ Play Our Song</button>
+      <p class="small">Add your legally obtained audio file at music/our-song.mp3 to enable playback.</p>
+    </div>
+    <button class="btn" onclick="showFinal()">MY LAST MESSAGE 💌</button>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section id="finalScene" class="hidden">
+  <div class="rose-bg"></div>
+  <div class="content fade-in">
+    <img class="final-rose"
+      src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=800&q=85"
+      alt="Red roses for Gloria">
+
+    <div class="eyebrow">One last thing, My Love</div>
+    <h1 class="script">My Queen Gloria</h1>
+
+    <p>If I could go back and choose all over again, I'd still want the chance to meet you, get to know you, and fall for that beautiful smile of yours.</p>
+
+    <div class="divider"></div>
+
+    <p>No matter where life takes us, a part of my heart will always be grateful that our paths crossed.</p>
+
+    <p>You're not just my Queen today. You're someone I hope to keep choosing, learning about, loving, and making beautiful memories with.</p>
+
+    <p>I can't promise that every chapter will be perfect, but I hope we keep writing our story with honesty, patience, laughter, and love.</p>
+
+    <p>Whenever you see this message again, I hope it reminds you of the girl whose smile means so much to me and whose presence has brought something special into my life.</p>
+
+    <div class="divider"></div>
+
+    <h2 class="script gold">Thank you for being you, Gloria.</h2>
+    <h2 class="script">Keep smiling, My Love. ❤️</h2>
+    <p class="gold">Forever a special part of my story.</p>
+    <button class="btn" onclick="showScene('ringScene')">
+  WAIT, MY LOVE... ONE MORE THING 💍
+</button>
+
+<button class="btn" onclick="restart()">
+  EXPERIENCE IT AGAIN ♥
+</button>
+  </div>
+</section>
+
+  <!-- FINAL SURPRISE: THE RING 💍 -->
+<section id="ringScene" class="hidden">
+  <div class="rose-bg"></div>
+
+  <div class="content fade-in">
+
+    <div class="eyebrow">A little question from my heart</div>
+
+    <h1 class="script">Wait, My Queen... ❤️</h1>
+
+    <p>
+      My love, before your journey through my heart ends,
+      there's one more thing I want to ask you.
+    </p>
+
+    <button class="btn" onclick="revealRing()">
+      OPEN YOUR FINAL SURPRISE 💌
+    </button>
+
+    <div id="ringReveal" class="hidden">
+
+      <div class="ring-box">💍</div>
+
+      <h1 class="script gold">My Queen Gloria</h1>
+
+      <p>
+        If I could choose you all over again,
+        I'd choose you in every lifetime.
+        I'd choose your smile, your heart,
+        your beautiful soul, and every little thing
+        that makes you the person I adore.
+      </p>
+
+      <p>
+        I don't need a perfect story.
+        I just want the chance to keep writing ours
+        with you, one beautiful day at a time.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2 class="script">
+        Will you be my girlfriend all over again? 💍
+      </h2>
+
+      <button class="btn" onclick="acceptProposal()">
+        YES, MY LOVE! ❤️
+      </button>
+
+      <button class="btn" onclick="showProposalMessage()">
+        TELL ME WHY YOU LOVE ME 🥹
+      </button>
+
+      <div id="proposalMessage" class="hidden">
+        <p class="gold">
+          Because you are you, Gloria. ❤️
+        </p>
+        <p>
+          Because your smile makes ordinary moments special,
+          because getting to know you has meant so much to me,
+          and because I want to keep choosing you with an
+          honest heart.
+        </p>
+        <p>
+          Take your time, My Love. This question comes
+          with all my affection, and your answer is yours
+          to give freely. 💗
+        </p>
+      </div>
+
+      <div id="proposalAccepted" class="hidden">
+        <h1 class="script gold">SHE SAID YES! 🥹❤️</h1>
+        <p>
+          Then let me choose you all over again, My Queen.
+          Today, tomorrow, and every day we get to share.
+        </p>
+        <p>
+          Here's to more laughter, more memories,
+          more understanding, and more love.
+        </p>
+        <p class="script gold" style="font-size:30px">
+          Always my special person. 👑🌹
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+const reasons = [
+  {
+    icon: "🌹",
+    title: "Your Beautiful Smile",
+    text: "Gloria, your smile has a special place in my heart. There's something about it that makes my day feel brighter, and I hope I give you reasons to smile just as much."
+  },
+  {
+    icon: "❤️",
+    title: "The Way You Make Me Feel",
+    text: "You make me feel something special that words can never fully explain. Sometimes, I wish you could see yourself through my eyes so you'd understand just how much you mean to me."
+  },
+  {
+    icon: "💕",
+    title: "Simply Being Gloria",
+    text: "I don't need you to be anyone else. I love the person you are, and there's something beautiful about knowing you get to be yourself around me."
+  },
+  {
+    icon: "🥹",
+    title: "The Happiness You Bring",
+    text: "You have a way of bringing happiness into my life without even trying. Sometimes, just thinking about you is enough to make me smile."
+  },
+  {
+    icon: "💌",
+    title: "Your Place in My Heart",
+    text: "You've become someone special to me, Gloria, and I'm grateful that our paths crossed."
+  },
+  {
+    icon: "🌷",
+    title: "Your Little Habits",
+    text: "Even the little things you do can make me smile. Sometimes, it's the smallest details about someone that become the most memorable."
+  },
+  {
+    icon: "💭",
+    title: "The Thought of You",
+    text: "You cross my mind in the middle of ordinary moments, and suddenly those moments don't feel so ordinary anymore."
+  },
+  {
+    icon: "✨",
+    title: "Your Beautiful Personality",
+    text: "There's more to you than what someone sees at first glance. I love getting to know the person behind that beautiful smile."
+  },
+  {
+    icon: "💗",
+    title: "Our Conversations",
+    text: "I treasure the moments when we talk, share our thoughts, and learn more about each other."
+  },
+  {
+    icon: "☀️",
+    title: "You Make Days Special",
+    text: "You remind me that happiness doesn't always need a big occasion. Sometimes, one person can make an ordinary day feel different."
+  },
+  {
+    icon: "👑",
+    title: "Your Uniqueness",
+    text: "There is only one Gloria, and that's what makes you irreplaceable in your own beautiful way."
+  },
+  {
+    icon: "📸",
+    title: "Our Memories",
+    text: "I love that our story is still being written. There are so many moments we haven't experienced yet, and I look forward to the memories ahead."
+  },
+  {
+    icon: "🥰",
+    title: "Your Laugh",
+    text: "Your smile is beautiful, but imagining you laughing freely and being happy makes me just as happy."
+  },
+  {
+    icon: "💖",
+    title: "Feeling Close to You",
+    text: "The little moments when I feel close to you remind me how meaningful it is to have someone special in my life."
+  },
+  {
+    icon: "🌙",
+    title: "Your Dreams",
+    text: "I want to know what makes you excited about the future, what you hope to achieve, and all the things that make you who you are."
+  },
+  {
+    icon: "🦋",
+    title: "Your Gentle Side",
+    text: "I appreciate the gentle, caring moments that show the beautiful person you are inside."
+  },
+  {
+    icon: "🎀",
+    title: "Little Reminders of You",
+    text: "Sometimes, something small reminds me of you, and before I know it, I'm smiling again."
+  },
+  {
+    icon: "🌍",
+    title: "The Possibilities Ahead",
+    text: "We still have so much to discover about each other. I hope we continue growing, laughing, learning, and creating beautiful memories together."
+  },
+  {
+    icon: "💐",
+    title: "You Deserve to Feel Special",
+    text: "I hope I can remind you that you are appreciated, that your feelings matter, and that you deserve kindness and genuine care."
+  },
+  {
+    icon: "❤️",
+    title: "Because You're My Queen",
+    text: "Of all the people I could have met, I'm grateful our paths crossed. You make me feel special, your smile brightens my world, and I'm grateful to have you in my life."
+  }
+];
+
+let currentReason = 0;
+let countdownTimer;
+let petalsTimer;
+
+function showScene(id) {
+  document.querySelectorAll("body > section").forEach(section => {
+    section.classList.add("hidden");
+  });
+
+  const scene = document.getElementById(id);
+  scene.classList.remove("hidden");
+  scene.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function startCountdown() {
+  clearInterval(countdownTimer);
+  showScene("countScene");
+
+  let count = 10;
+  document.getElementById("countdown").textContent = count;
+
+  countdownTimer = setInterval(() => {
+    count--;
+    document.getElementById("countdown").textContent = count;
+
+    if (count <= 0) {
+      clearInterval(countdownTimer);
+      showScene("envelopeScene");
+    }
+  }, 1000);
+}
+
+function openLetter() {
+  const letter = document.getElementById("letter");
+  letter.classList.remove("hidden");
+  letter.classList.add("fade-in");
+  document.getElementById("letterNext").classList.remove("hidden");
+  document.getElementById("letterNext").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+function showReasons() {
+  currentReason = 0;
+  renderReason();
+  showScene("reasonsScene");
+}
+
+function renderReason() {
+  const reason = reasons[currentReason];
+
+  document.getElementById("reasonNumber").textContent =
+  `REASON ${String(currentReason + 1).padStart(2, "0")} OF 20`;
+    document.getElementById("reasonIcon").textContent = reason.icon;
+  document.getElementById("reasonTitle").textContent = reason.title;
+  document.getElementById("reasonText").textContent = reason.text;
+
+  document.getElementById("prevReason").disabled = currentReason === 0;
+
+  document.getElementById("nextReason").textContent =
+    currentReason === reasons.length - 1
+      ? "Finish the Reasons ♥"
+      : "Next Reason →";
+
+  document.getElementById("musicNext").classList.toggle(
+    "hidden",
+    currentReason !== reasons.length - 1
+  );
+
+  const card = document.querySelector(".reason-card");
+  card.classList.remove("fade-in");
+  void card.offsetWidth;
+  card.classList.add("fade-in");
+}
+
+function changeReason(direction) {
+  if (direction === 1 && currentReason === reasons.length - 1) {
+    showMusic();
+    return;
+  }
+
+  currentReason = Math.max(
+    0,
+    Math.min(reasons.length - 1, currentReason + direction)
+  );
+
+  renderReason();
+}
+
+function showMusic() {
+  showScene("musicScene");
+}
+
+async function toggleMusic() {
+  const song = document.getElementById("song");
+  const button = document.getElementById("playButton");
+  const vinyl = document.getElementById("vinyl");
+
+  if (song.paused) {
+    try {
+      await song.play();
+      button.textContent = "❚❚ Pause Our Song";
+      vinyl.classList.add("playing");
+    } catch (error) {
+      alert("Add your song file at music/our-song.mp3, then try again.");
+    }
+  } else {
+    song.pause();
+    button.textContent = "▶ Play Our Song";
+    vinyl.classList.remove("playing");
+  }
+}
+
+document.getElementById("song").addEventListener("ended", () => {
+  document.getElementById("playButton").textContent = "▶ Play Our Song";
+  document.getElementById("vinyl").classList.remove("playing");
+});
+
+function showFinal() {
+  showScene("finalScene");
+}
+  function revealRing() {
+  document.getElementById("ringReveal").classList.remove("hidden");
+}
+
+function acceptProposal() {
+  document.getElementById("proposalAccepted").classList.remove("hidden");
+  document.getElementById("proposalMessage").classList.add("hidden");
+}
+
+function showProposalMessage() {
+  document.getElementById("proposalMessage").classList.remove("hidden");
+}
+
+function restart() {
+  clearInterval(countdownTimer);
+  document.getElementById("letter").classList.add("hidden");
+  document.getElementById("letterNext").classList.add("hidden");
+
+  const song = document.getElementById("song");
+  song.pause();
+  song.currentTime = 0;
+
+  document.getElementById("playButton").textContent = "▶ Play Our Song";
+  document.getElementById("vinyl").classList.remove("playing");
+
+  showScene("opening");
+}
+
+function createPetal() {
+  const container = document.getElementById("petals");
+  const petal = document.createElement("span");
+
+  const symbols = ["🌹", "🌺", "❀", "✿"];
+
+  petal.className = "petal";
+  petal.textContent =
+    symbols[Math.floor(Math.random() * symbols.length)];
+
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.fontSize = (10 + Math.random() * 12) + "px";
+  petal.style.animationDuration = (9 + Math.random() * 9) + "s";
+
+  petal.style.opacity = (0.3 + Math.random() * 0.5).toFixed(2);
+  petal.style.filter = "blur(" + (Math.random() * 0.7) + "px)";
+
+  petal.style.transform =
+    "rotate(" + Math.floor(Math.random() * 360) + "deg)";
+
+  container.appendChild(petal);
+
+  setTimeout(() => petal.remove(), 19000);
+}
+
+petalsTimer = setInterval(createPetal, 900);
+</script>
+</body>
+</html>
